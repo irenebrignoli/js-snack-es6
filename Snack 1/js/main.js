@@ -20,16 +20,55 @@ Usiamo i nuovi metodi degli array foreach o filter.
 
 const bici = [
   {
-    nome: 'bici città',
+    nome: 'Bianchi',
     peso: 60
   },
    {
-    nome: 'bici da gara',
+    nome: 'Atala',
     peso: 30
   },
    {
-    nome: 'bici da corsa',
+    nome: 'Olmo',
     peso: 40
   },
 ]
+
+
+let pesoMinore = bici[0].peso;
+
+bici.forEach(element =>{
+
+  if(element.peso < pesoMinore){
+    pesoMinore = element.peso;
+  }
+});
+
+console.log('peso minore: ' + pesoMinore);
+
+const{nome, peso} = bici[1];
+
+console.log(`La bici ${nome} pesa ${peso}kg e quindi è la più leggera`);
+
+const risultatoDom = document.getElementById('risultato');
+
+risultatoDom.innerHTML = `La bici ${nome} pesa ${peso}kg e quindi è la più leggera.`;
+
+
+
+//PROVA CON NUMERI
+/*
+const numeri = [7,9,4,1,2];
+
+let result = numeri[0];
+
+numeri.forEach(element =>{
+
+  if(element < result){
+    result = element;
+  }
+});
+
+console.log('smallest number: ' + result);
+*/
+
 
